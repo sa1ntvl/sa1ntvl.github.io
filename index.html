@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Главная страница</title>
+    <style> 
+        a:hover {
+            background-color: pink;
+        }
+        a.active {
+         background-color: palevioletred;
+        }
+    </style>
 </head>
-<body>
-    Мой первый  сайт
+<body id="start">
+    <header>
+        <a href="index.html">
+        <img src="images/logo.jpg" width="60" alt="На главную">
+    </a>
+
+    <nav>
+        <p>
+            <a href="index.html" class="active">Главная</a> |
+            <a href="catalog.html">Меню</a> |
+            <a href="guide.html">О кофе</a> |
+            <a href="contacts.html">Контакты</a> |
+            <a href="pass.html">Паспорт</a> |
+            <a href="algorithm.html">Задача</a> |
+            <a href="photo.html">Фото</a>
+
+        </p>
+
+        <p>
+            <a href="catalog.html#prices">Цены</a> |
+
+            <a href="https://www.hse.ru/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Сайт НИУ ВШЭ
+            </a>
+        </p>
+    </nav>
+
+    <hr>
+    </header>
+
+    <main>
+         <h1>Кофейный гид</h1>
+
+    <p>
+        Здесь можно познакомиться с напитками,
+        выбрать кофе и отправить учебный заказ.
+    </p>
+
+    <nav>
+        <a href="#about">О сайте</a> |
+        <a href="#photo">Фотография</a>
+    </nav>
+
+    <section id="about">
+        <h2>О сайте</h2>
+
+        <p>
+            Наш гид посвящён кофе и способам его приготовления.
+            На сайте собраны описания напитков, учебное меню
+            и рекомендации по приготовлению.
+        </p>
+
+        <p>
+            <a href="guide.html">Прочитать статью о кофе</a>
+        </p>
+
+        <p>
+            <a href="catalog.html">Открыть меню и форму заказа</a>
+        </p>
+
+        <p>
+            <a href="contacts.html">Оставить сообщение</a>
+        </p>
+    </section>
+
+    <section id="photo">
+        <h2>Фотография</h2>
+
+        <figure>
+            <a href="photo.html"
+               target="_blank"
+               rel="noopener">
+
+                <img src="images/coffee.jpg"
+                     width="100"
+                     alt="Открыть большую фотографию кофе">
+            </a>
+
+            <figcaption>
+                Нажмите на миниатюру, чтобы открыть фотографию
+                размером 600 × 400 пикселей в новой вкладке.
+            </figcaption>
+        </figure>
+    </section>
+
+    </main>
+
+    <footer>
+        <hr>
+
+    <p>
+        <a href="#top">К началу страницы</a>
+    </p>
+
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Меню и заказ — Кофейный гид</title>
+     <style> 
+        a:hover {
+            background-color: pink;
+        }
+        a.active {
+         background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+<header>
+    <a href="index.html">
+        <img src="images/logo.jpg" width="60" alt="На главную">
+    </a>
+
+    <nav>
+        <p>
+            <a href="index.html">Главная</a> |
+            <a href="catalog.html" class="active">Меню</a> |
+            <a href="guide.html">О кофе</a> |
+            <a href="contacts.html">Контакты</a> |
+            <a href="pass.html">Паспорт</a> |
+            <a href="algorithm.html">Задача</a> |
+            <a href="photo.html">Фото</a>
+        </p>
+
+        <p>
+            <a href="catalog.html#prices">Цены</a> |
+
+            <a href="https://www.hse.ru/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Сайт НИУ ВШЭ
+            </a>
+        </p>
+    </nav>
+
+    <hr>
+</header>
+
+<main>
+    <h1>Меню и учебный заказ</h1>
+
+    <p>Цены и товары приведены для демонстрации работы сайта.</p>
+
+    <nav>
+        <a href="#prices">Цены</a> |
+        <a href="#order">Заказ</a>
+    </nav>
+
+    <section id="prices">
+        <h2>Цены</h2>
+
+
+        <table border="1"
+               cellpadding="12"
+               cellspacing="0"
+               width="100%"
+               background="images/table-bg.jpg">
+
+            <caption>Учебное меню</caption>
+
+            <thead>
+                <tr>
+                    <th>Напиток</th>
+                    <th>Изображение</th>
+                    <th>Цена</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <!-- Отдельный фон одной ячейки. -->
+                    <td background="images/cell-bg.jpg">
+                        Капучино
+                    </td>
+
+                    <td>
+                        <a href="photo.html"
+                           target="_blank"
+                           rel="noopener">
+
+                            <img src="images/coffee.jpg"
+                                 width="100"
+                                 alt="Капучино">
+                        </a>
+                    </td>
+
+                    <td>250 ₽</td>
+
+                    <td>
+                        <a href="guide.html#types">Кофе с молоком</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Американо</td>
+                    <td>Без молока</td>
+                    <td>180 ₽</td>
+
+                    <td>
+                        <a href="guide.html#types">Чёрный кофе</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Латте</td>
+                    <td>С молоком</td>
+                    <td>280 ₽</td>
+
+                    <td>
+                        <a href="#order">Перейти к заказу</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="order">
+        <h2>Заказать напиток</h2>
+
+        <p>
+            Форма отправляет данные тестовому серверу.
+            В новой вкладке можно будет увидеть полученные значения.
+        </p>
+
+        <form action="https://httpbin.org/post"
+              method="post"
+              target="_blank">
+
+            <!-- Тип text. -->
+            <p>
+                <label>
+                    Напиток:
+
+                    <input type="text"
+                           name="drink_name"
+                           value="Капучино"
+                           required>
+                </label>
+            </p>
+
+            <!-- Тип number. -->
+            <p>
+                <label>
+                    Количество:
+
+                    <input type="number"
+                           name="quantity"
+                           value="1"
+                           min="1"
+                           step="1"
+                           required>
+                </label>
+            </p>
+
+            <!-- Тип radio. -->
+            <fieldset>
+                <legend>Размер напитка</legend>
+
+                <label>
+                    <input type="radio"
+                           name="drink_size"
+                           value="small"
+                           checked>
+
+                    Маленький
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="drink_size"
+                           value="large">
+
+                    Большой
+                </label>
+            </fieldset>
+
+            <!-- Тип checkbox. -->
+            <p>
+                <label>
+                    <input type="checkbox"
+                           name="add_syrup"
+                           value="yes"
+                           checked>
+
+                    Добавить сироп
+                </label>
+            </p>
+
+            <!-- Тип date. -->
+            <p>
+                <label>
+                    Дата получения:
+
+                    <input type="date"
+                           id="pickup-date"
+                           name="pickup_date"
+                           value="2026-10-21"
+                           required>
+                </label>
+            </p>
+
+            <!-- Тип password. -->
+            <p>
+                <label>
+                    Пароль заказа:
+
+                    <input type="password"
+                           name="order_password"
+                           value="DEMO123"
+                           required>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Комментарий:
+
+                    <textarea name="order_comment"
+                              rows="3"
+                              cols="35">Без дополнительных пожеланий</textarea>
+                </label>
+            </p>
+
+            <input type="hidden"
+                   name="form_type"
+                   value="coffee_order">
+
+            <button type="submit">Отправить заказ</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <hr>
+
+    <p>
+        <a href="#top">К началу страницы</a>
+    </p>
+</footer>
+
+</body>
+</html>

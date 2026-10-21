@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+    <style> 
+        a:hover {
+            background-color: pink;
+        }
+        a.active {
+         background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+<nav>
+    <a href="index.html">
+        <img src="images/logo.jpg" width="60" alt="Главная">
+    </a>
+
+    <p>
+        <a href="index.html">Главная</a> |
+        <a href="catalog.html">Меню</a> |
+        <a href="guide.html">О кофе</a> |
+        <a href="contacts.html">Контакты</a> |
+        <a href="pass.html">Паспорт</a> |
+        <a href="algorithm.html" class="active">Задача</a> |
+        <a href="photo.html">Фото</a>
+    </p>
+
+    <p>
+        <a href="catalog.html#prices">Цены</a> |
+
+        <a href="https://www.hse.ru/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Сайт НИУ ВШЭ
+        </a>
+    </p>
+</nav>
+
+<hr>
+
+<h1>Решение алгоритмической задачи</h1>
+
+<h2>Задача №1007</h2>
+
+<p>
+    Имеются две ёмкости: кубическая с ребром A,
+    цилиндрическая с высотой H и радиусом основания R.
+    Определить, поместится ли жидкость объёма M
+    в первую ёмкость, во вторую, в обе.
+</p>
+
+<form id="task-form">
+
+    <p>
+        <label>
+            Ребро куба A:
+
+            <input type="number"
+                   id="a"
+                   min="0"
+                   step="any"
+                   required>
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Высота цилиндра H:
+
+            <input type="number"
+                   id="h"
+                   min="0"
+                   step="any"
+                   required>
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Радиус основания R:
+
+            <input type="number"
+                   id="r"
+                   min="0"
+                   step="any"
+                   required>
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Объём жидкости M:
+
+            <input type="number"
+                   id="m"
+                   min="0"
+                   step="any"
+                   required>
+        </label>
+    </p>
+
+    <button type="submit">Решить задачу</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+    document
+        .getElementById("task-form")
+        .addEventListener("submit", function (event) {
+
+            // Выполняем расчёт на странице.
+            event.preventDefault();
+
+            // Получаем введённые числа.
+            const a = Number(document.getElementById("a").value);
+            const h = Number(document.getElementById("h").value);
+            const r = Number(document.getElementById("r").value);
+            const m = Number(document.getElementById("m").value);
+
+            // Вычисляем объёмы ёмкостей.
+            const cube = a ** 3;
+            const cylinder = Math.PI * r ** 2 * h;
+
+            const result = document.getElementById("result");
+
+            // Проверяем все возможные случаи.
+            if (m <= cube && m <= cylinder) {
+                result.textContent =
+                    "Жидкость поместится в обе ёмкости.";
+
+            } else if (m <= cube) {
+                result.textContent =
+                    "Жидкость поместится только в первую ёмкость — кубическую.";
+
+            } else if (m <= cylinder) {
+                result.textContent =
+                    "Жидкость поместится только во вторую ёмкость — цилиндрическую.";
+
+            } else {
+                result.textContent =
+                    "Жидкость не поместится ни в одну ёмкость.";
+            }
+        });
+</script>
+
+<footer>
+    <hr>
+
+    <p>
+        <a href="#top">К началу страницы</a>
+    </p>
+</footer>
+
+</body>
+</html>

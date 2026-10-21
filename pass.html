@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Паспорт</title>
+    <style>
+        a:hover {
+            background-color: pink;
+        }
+
+        .passport {
+            position: relative;
+            width: 378px;
+            height: 529px;
+            margin-top: 20px;
+            background-image: url("images/pass.jfif");
+            background-repeat: no-repeat;
+            font-family: "Times New Roman", serif;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .field {
+            position: absolute;
+        }
+
+        .vid {
+            top: 72px;
+            left: 40px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .date_vid {
+            top: 112px;
+            left: 78px;
+        }
+
+        .code {
+            top: 112px;
+            left: 245px;
+        }
+
+        .fam {
+            top: 290px;
+            left: 160px;
+        }
+
+        .imya {
+            top: 330px;
+            left: 160px;
+        }
+
+        .otc {
+            top: 350px;
+            left: 160px;
+        }
+
+        .sex {
+            top: 370px;
+            left: 150px;
+        }
+
+        .date {
+            top: 370px;
+            left: 235px;
+        }
+
+        .place {
+            top: 391px;
+            left: 160px;
+            width: 180px;
+        }
+
+        .photo {
+            position: absolute;
+            top: 324px;
+            left: 18px;
+            width: 100px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .button {
+            margin-top: 12px;
+        }
+    </style>
+  </head>
+  <body>
+<header>
+     <a href="index.html">
+        <img src="images/logo.jpg" width="60" alt="На главную">
+    </a>
+
+    <nav>
+        <p>
+            <a href="index.html">Главная</a> |
+            <a href="catalog.html">Меню</a> |
+            <a href="guide.html">О кофе</a> |
+            <a href="contacts.html">Контакты</a> |
+            <a href="pass.html" class="active">Паспорт</a> |
+            <a href="algorithm.html">Задача</a> |
+            <a href="photo.html">Фото</a>
+        </p>
+
+        <p>
+            <a href="catalog.html#prices">Цены</a> |
+
+            <a href="https://www.hse.ru/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Сайт НИУ ВШЭ
+            </a>
+        </p>
+    </nav>
+
+    <hr>
+
+</header>
+
+<main>
+    <div class="passport">
+        <div class="field vid">ГУ МВД ПО Г. Санкт-Петербург</div>
+        <div class="field date_vid">06.07.2067</div>
+        <div class="field code">670-670</div>
+        <div class="field fam">Федорова</div>
+        <div class="field imya">Диана</div>
+        <div class="field otc">Алексеевна</div>
+        <div class="field sex">Жен</div>
+        <div class="field date">20.06.2006</div>
+        <div class="field place">Г. Санкт-Петербург</div>
+        <img class="photo" src="images/logo.jpg" alt="Фото Hello Kitty">
+    </div>
+
+    <button class="button" id="change" type="button">Заменить на латиницу</button>
+
+
+    <div>
+        <p>
+            Считывание DOM
+
+            <img src="images/dom.jpg" alt="Скриншот получения данных"> 
+        </p>
+
+    </div>
+</main>
+
+<script src="scripts/pass.js"></script>
+</body>
+</html>

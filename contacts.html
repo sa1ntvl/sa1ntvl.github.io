@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+     <style> 
+        a:hover {
+            background-color: pink;
+        }
+        a.active {
+         background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+<nav>
+    <a href="index.html">
+        <img src="images/logo.jpg" width="60" alt="Главная">
+    </a>
+
+    <p>
+        <a href="index.html">Главная</a> |
+        <a href="catalog.html">Меню</a> |
+        <a href="guide.html">О кофе</a> |
+        <a href="contacts.html" class="active">Контакты</a> |
+        <a href="pass.html">Паспорт</a> |
+        <a href="algorithm.html">Задача</a> |
+        <a href="photo.html">Фото</a>
+    </p>
+
+    <p>
+        <a href="catalog.html#prices">Цены</a> |
+
+        <a href="https://www.hse.ru/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Сайт НИУ ВШЭ
+        </a>
+    </p>
+</nav>
+
+<hr>
+
+<h1>Контакты</h1>
+
+<p>
+    <a href="#information">Контактная информация</a> |
+    <a href="#contact-form">Форма</a> |
+    <a href="#top">К началу</a>
+</p>
+
+<h2 id="information">Контактная информация</h2>
+
+<p>Электронная почта автора сайта: ________</p>
+
+<h2 id="contact-form">Контактная форма</h2>
+
+<form action="https://httpbin.org/post"
+      method="post"
+      target="_blank">
+
+    <p>
+        <label>
+            Фамилия:
+
+            <input type="text" name="surname">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Имя:
+
+            <input type="text" name="first_name">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Группа:
+
+            <input type="text" name="study_group">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Мобильный телефон:
+
+            <input type="tel" name="phone">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Электронная почта:
+
+            <input type="email" name="email">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Дата отправки:
+
+            <input type="date"
+                   name="message_date"
+                   value="2026-10-20">
+        </label>
+    </p>
+
+    <button type="submit">Отправить</button>
+
+</form>
+
+<footer>
+    <hr>
+
+    <p>
+        <a href="#top">К началу страницы</a>
+    </p>
+</footer>
+
+</body>
+</html>
